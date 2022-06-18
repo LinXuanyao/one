@@ -17,7 +17,7 @@
       }">
         {{ article.author.username }}
       </nuxt-link>
-      <span class="date">{{ article.createdAt | date('MMM DD, YYYY') }}</span>
+      <span class="date">{{ article.createdAt | dateFormater('MMM DD, YYYY') }}</span>
     </div>
     <button
       class="btn btn-sm btn-outline-secondary"

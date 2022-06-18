@@ -15,10 +15,10 @@ export default (context) => {
     // 请求拦截器
     request.interceptors.request.use((config) => {
 
-        let token = `Token ${store.state.user.token}`
+        const {user} = store.state
 
-        if (token) {
-            config.headers.token = token
+        if (user && user.token) {
+            config.headers.Authorization = `Token ${user.token}`
         }
 
         return config

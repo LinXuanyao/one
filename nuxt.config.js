@@ -55,5 +55,18 @@ module.exports = {
                 },
             ])
         }
+    },
+
+    // 注册插件
+    plugins:[
+        '~/plugins/request.js',
+        '~/plugins/day.js',
+    ],
+
+    server:{
+        // host:'0.0.0.0', // 项目上线
+        host:'localhost', // 只能用于本机访问
+        port:3000,
     }
+
 }
